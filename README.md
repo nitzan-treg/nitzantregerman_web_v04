@@ -21,7 +21,7 @@ Heavy MP4 assets are hosted as GitHub Release assets on this repo and served via
 Set in Vercel (and locally in `.env.local` for testing):
 
 ```
-NEXT_PUBLIC_VIDEO_CDN=https://github.com/nitzan-treg/nitzantregerman.com/releases/download/videos-v1
+NEXT_PUBLIC_VIDEO_CDN=https://github.com/nitzan-treg/nitzantregerman_web_v03/releases/download/videos-v1
 ```
 
 When unset, videos load from `public/assets/videos/` directly.
