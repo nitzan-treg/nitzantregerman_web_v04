@@ -4,11 +4,11 @@ import Image from "next/image";
 import { nitzanProfile } from "@/data/nitzan-projects";
 
 const socialIcons = [
-  { key: "linkedin", url: nitzanProfile.social.linkedin, icon: "/assets/images/social/linkedin.png", alt: "LinkedIn" },
-  { key: "github", url: nitzanProfile.social.github, icon: "/assets/images/social/github.png", alt: "GitHub" },
-  { key: "youtube", url: nitzanProfile.social.youtube, icon: "/assets/images/social/youtube.png", alt: "YouTube" },
-  { key: "vimeo", url: nitzanProfile.social.vimeo, icon: "/assets/images/social/vimeo.png", alt: "Vimeo" },
-  { key: "instagram", url: nitzanProfile.social.instagram, icon: "/assets/images/social/instagram.png", alt: "Instagram" },
+  { key: "linkedin", url: nitzanProfile.social.linkedin, icon: "/assets/images/linkedin-icon.png", alt: "LinkedIn" },
+  { key: "github", url: nitzanProfile.social.github, icon: "/assets/images/github-icon.png", alt: "GitHub" },
+  { key: "youtube", url: nitzanProfile.social.youtube, icon: "/assets/images/youtube-icon.png", alt: "YouTube" },
+  { key: "vimeo", url: nitzanProfile.social.vimeo, icon: "/assets/images/vimeo-icon.png", alt: "Vimeo" },
+  { key: "instagram", url: nitzanProfile.social.instagram, icon: "/assets/images/instagram-icon.png", alt: "Instagram" },
 ];
 
 export default function NitzanFooter() {
