@@ -1,27 +1,12 @@
 # nitzantregerman.com
 
-Personal portfolio site for Nitzan Tregerman — 3D Animation & VFX.
+Portfolio site — 3D animation & VFX work by Nitzan Tregerman. Built with Next.js 16, React 19, Tailwind v4, GSAP, and framer-motion.
 
-Built with Next.js 16 (App Router) + React 19 + Tailwind v4 + GSAP + framer-motion. Deployed on Vercel.
+## Structure
 
-## Local development
-
-```bash
-npm install
-npm run dev       # http://localhost:3000
-npm run build
-npm run lint
-npm run typecheck
-```
-
-## Environment
-
-Heavy MP4 assets are hosted as GitHub Release assets on this repo and served via a 308 redirect from `/assets/videos/*` → release URL, so they don't count against the Vercel bandwidth budget.
-
-Set in Vercel (and locally in `.env.local` for testing):
-
-```
-NEXT_PUBLIC_VIDEO_CDN=https://github.com/nitzan-treg/nitzantregerman_web_v03/releases/download/videos-v1
-```
-
-When unset, videos load from `public/assets/videos/` directly.
+- `src/app/` — routes: `/` (home grid), `/about`, `/work/[slug]`, plus auto-generated `/sitemap.xml` and `/_not-found`.
+- `src/components/WaveHero/` — animated SVG hero used across project pages.
+- `src/components/animation/` — GSAP-driven scroll primitives (`FadeIn`, `TextReveal`).
+- `src/data/nitzan-projects.ts` — every project's metadata, copy, and asset paths.
+- `public/assets/images/` — posters, portraits, icons, favicons.
+- Root: `next.config.ts`, `tsconfig.json`, `package.json`, `eslint.config.mjs`, `postcss.config.mjs`.
