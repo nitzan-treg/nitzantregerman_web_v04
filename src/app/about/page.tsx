@@ -76,15 +76,15 @@ function PhotoCarousel() {
 
 export default function NitzanAboutPage() {
   return (
-    <div className="flex min-h-screen flex-col justify-center">
+    <div className="flex min-h-screen flex-col md:justify-center">
       {/* ── Intro grid (text left, carousel right) ─────── */}
-      <section className="px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
+      <section className="pt-32 md:pt-0 px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
         <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-[2fr_1fr] md:gap-32">
           {/* ── Left: text + social ─────────────────────── */}
           <div className="flex flex-col justify-center">
             <TextReveal
               as="h1"
-              className="text-brand-text mb-10 text-3xl font-light tracking-tight md:text-4xl"
+              className="text-brand-text mb-6 md:mb-10 text-2xl font-light tracking-tight md:text-4xl"
               delay={0.1}
             >
               Thanks for stopping by!
@@ -93,40 +93,40 @@ export default function NitzanAboutPage() {
             <div className="space-y-6">
               <FadeIn direction="up" delay={0.15}>
                 <p
-                  className="text-black font-light leading-[1.8]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-black font-light leading-[1.55] md:leading-[1.8]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {nitzanProfile.bio}
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.2}>
                 <p
-                  className="text-black font-light leading-[1.8]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-black font-light leading-[1.55] md:leading-[1.8]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {nitzanProfile.expertise}
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.25}>
                 <p
-                  className="text-black font-light leading-[1.8]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-black font-light leading-[1.55] md:leading-[1.8]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {nitzanProfile.philosophy}
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.3}>
                 <p
-                  className="text-black font-light leading-[1.8]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-black font-light leading-[1.55] md:leading-[1.8]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {nitzanProfile.personal}
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.35}>
                 <p
-                  className="text-black font-light leading-[1.8]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-black font-light leading-[1.55] md:leading-[1.8]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {nitzanProfile.contactCta}
                 </p>

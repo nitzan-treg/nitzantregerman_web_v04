@@ -703,7 +703,7 @@ export default function ProjectDetailClient({
         <div
           className={`${
             isWaveHero
-              ? "pt-0 pb-10 md:pb-14 -mt-[25vh] md:-mt-[34vh]"
+              ? "pt-0 pb-10 md:pb-14 -mt-[8vh] md:-mt-[34vh]"
               : "py-12 md:py-16"
           } px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] relative z-10`}
         >
@@ -779,8 +779,8 @@ export default function ProjectDetailClient({
               {project.description.map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={i * 0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -808,8 +808,8 @@ export default function ProjectDetailClient({
               {project.description.slice(0, 3).map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -843,8 +843,8 @@ export default function ProjectDetailClient({
               {project.description.slice(3).map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-white/70 font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -862,8 +862,8 @@ export default function ProjectDetailClient({
             <div className="">
               <FadeIn direction="up">
                 <p
-                  className="text-brand-text font-light leading-[1.7] text-center"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-brand-text font-light leading-[1.55] md:leading-[1.7] text-center"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {project.description[0]}
                 </p>
@@ -941,8 +941,8 @@ export default function ProjectDetailClient({
               {project.description[1] && (
                 <FadeIn direction="up" delay={0.08}>
                   <p
-                    className="text-brand-text font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {project.description[1]}
                   </p>
@@ -1006,8 +1006,8 @@ export default function ProjectDetailClient({
                 </FadeIn>
                 <FadeIn direction="up" delay={0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7] mt-4"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7] mt-4"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {project.features?.[0]?.description}
                   </p>
@@ -1035,8 +1035,8 @@ export default function ProjectDetailClient({
                 </FadeIn>
                 <FadeIn direction="up" delay={0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7] mt-4"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7] mt-4"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {project.features?.[1]?.description}
                   </p>
@@ -1064,8 +1064,8 @@ export default function ProjectDetailClient({
                 </FadeIn>
                 <FadeIn direction="up" delay={0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7] mt-4"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7] mt-4"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {project.features?.[2]?.description}
                   </p>
@@ -1093,8 +1093,8 @@ export default function ProjectDetailClient({
                 </FadeIn>
                 <FadeIn direction="up" delay={0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7] mt-4"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7] mt-4"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {project.features?.[3]?.description}
                   </p>
@@ -1126,8 +1126,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-brand-text font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {project.description[0]}
                 </p>
@@ -1159,8 +1159,8 @@ export default function ProjectDetailClient({
               {project.description.slice(1).map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-white/70 font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -1204,8 +1204,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-brand-text font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {project.description[0]}
                 </p>
@@ -1238,8 +1238,8 @@ export default function ProjectDetailClient({
               {project.description.slice(1).map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-white/70 font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -1279,8 +1279,8 @@ export default function ProjectDetailClient({
           <section className="pb-16 md:pb-24 px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
             <FadeIn direction="up">
               <p
-                className="text-brand-text text-center font-light leading-[1.5]"
-                style={{ fontSize: "clamp(1.35rem, 2.2vw, 1.9rem)" }}
+                className="text-brand-text text-center font-light leading-[1.5] md:leading-[1.5]"
+                style={{ fontSize: "clamp(1.05rem, 2.2vw, 1.9rem)" }}
               >
                 {project.description[0]}
               </p>
@@ -1317,7 +1317,7 @@ export default function ProjectDetailClient({
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-light text-[#2F6FEB] hover:underline"
-                          style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                          style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                         >
                           Sign Up for the Next Meetup (January 2026)
                         </a>
@@ -1335,7 +1335,7 @@ export default function ProjectDetailClient({
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-light text-[#2F6FEB] hover:underline"
-                          style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                          style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                         >
                           Join our Discord Channel
                         </a>
@@ -1353,7 +1353,7 @@ export default function ProjectDetailClient({
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-light text-[#2F6FEB] hover:underline"
-                          style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                          style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                         >
                           Join our Whatsapp Group
                         </a>
@@ -1382,8 +1382,8 @@ export default function ProjectDetailClient({
                       The Community &amp; Content
                     </h2>
                     <p
-                      className="text-brand-text font-light leading-[1.7]"
-                      style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                      className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                      style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                     >
                       {project.description[1]}
                     </p>
@@ -1402,8 +1402,8 @@ export default function ProjectDetailClient({
                       Event Design
                     </h2>
                     <p
-                      className="text-brand-text font-light leading-[1.7]"
-                      style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                      className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                      style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                     >
                       {project.description[2]}
                     </p>
@@ -1432,8 +1432,8 @@ export default function ProjectDetailClient({
                       Behind the Scenes
                     </h2>
                     <p
-                      className="text-brand-text font-light leading-[1.7]"
-                      style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                      className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                      style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                     >
                       {project.description[3]}
                     </p>
@@ -1463,8 +1463,8 @@ export default function ProjectDetailClient({
               {project.description.map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -1498,8 +1498,8 @@ export default function ProjectDetailClient({
               {project.behindTheScenes?.map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-white/70 font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -1540,8 +1540,8 @@ export default function ProjectDetailClient({
               {project.description.slice(0, 3).map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-brand-text font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -1571,8 +1571,8 @@ export default function ProjectDetailClient({
               {project.description.slice(3).map((paragraph, i) => (
                 <FadeIn key={i} direction="up" delay={(i + 1) * 0.06}>
                   <p
-                    className="text-white/70 font-light leading-[1.7]"
-                    style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                    className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                    style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                   >
                     {paragraph}
                   </p>
@@ -1605,8 +1605,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-brand-text font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   The Polar Coordiantes deformation was so inspiring for me, i decided to concise it to a Houdini tutorial and share it with the community
                 </p>
@@ -1635,8 +1635,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-brand-text font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {project.description[0]}
                 </p>
@@ -1668,16 +1668,16 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-white/70 font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   The task involved two key stages:
                 </p>
               </FadeIn>
               <FadeIn direction="up" delay={0.12}>
                 <ul
-                  className="list-disc pl-6 space-y-3 text-white/70 font-light leading-[1.7] marker:text-white/40"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="list-disc pl-6 space-y-3 text-white/70 font-light leading-[1.55] md:leading-[1.7] marker:text-white/40"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   <li>
                     <span className="text-white/90 font-medium">Grooming:</span>{" "}
@@ -1696,8 +1696,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.18}>
                 <p
-                  className="text-white/70 font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   After completing the VFX, I rendered the goat with Redshift.
                 </p>
@@ -1731,8 +1731,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-brand-text font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-brand-text font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {project.description[0]}
                 </p>
@@ -1756,8 +1756,8 @@ export default function ProjectDetailClient({
               </FadeIn>
               <FadeIn direction="up" delay={0.06}>
                 <p
-                  className="text-white/70 font-light leading-[1.7]"
-                  style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                  className="text-white/70 font-light leading-[1.55] md:leading-[1.7]"
+                  style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                 >
                   {project.description[1]}
                 </p>
@@ -1815,7 +1815,7 @@ export default function ProjectDetailClient({
                 </FadeIn>
                 {project.behindTheScenes.map((p, i) => (
                   <FadeIn key={i} direction="up" delay={0.1}>
-                    <p className="text-brand-muted text-[1.15rem] leading-[1.7]">
+                    <p className="text-brand-muted text-[1.15rem] leading-[1.55] md:leading-[1.7]">
                       {p}
                     </p>
                   </FadeIn>
@@ -1913,7 +1913,7 @@ export default function ProjectDetailClient({
                         </span>
                         <span
                           className="text-brand-text font-light leading-[1.5]"
-                          style={{ fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}
+                          style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                         >
                           {row.name}
                         </span>

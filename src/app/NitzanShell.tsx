@@ -40,8 +40,8 @@ function NitzanNav() {
   return (
     <nav
       aria-label="Portfolio navigation"
-      className={`fixed top-0 left-0 right-0 z-50 bg-transparent ${
-        menuOpen ? "" : "mix-blend-difference"
+      className={`fixed top-0 left-0 right-0 z-50 bg-white md:bg-transparent ${
+        menuOpen ? "" : "md:mix-blend-difference"
       }`}
     >
       <div className="flex items-center justify-between px-6 pt-10 pb-5 md:px-10 lg:px-16">
@@ -61,12 +61,12 @@ function NitzanNav() {
               alt=""
               width={104}
               height={104}
-              className={`h-10 w-auto ${menuOpen ? "" : "invert"}`}
+              className={`h-10 w-auto ${menuOpen ? "" : "md:invert"}`}
               priority
             />
             <span
               className={`text-lg tracking-wide ${
-                menuOpen ? "text-brand-text" : "text-white"
+                menuOpen ? "text-brand-text" : "text-brand-text md:text-white"
               }`}
             >
               nitzan tregerman
@@ -116,17 +116,17 @@ function NitzanNav() {
           <div className="flex w-[26px] flex-col gap-[6px]">
             <span
               className={`block h-[1.5px] w-full transition-transform duration-300 ${
-                menuOpen ? "bg-brand-text translate-y-[6.5px] rotate-45" : "bg-white"
+                menuOpen ? "bg-brand-text translate-y-[6.5px] rotate-45" : "bg-brand-text md:bg-white"
               }`}
             />
             <span
               className={`block h-[1.5px] w-full transition-opacity duration-300 ${
-                menuOpen ? "bg-brand-text opacity-0" : "bg-white"
+                menuOpen ? "bg-brand-text opacity-0" : "bg-brand-text md:bg-white"
               }`}
             />
             <span
               className={`block h-[1.5px] w-full transition-transform duration-300 ${
-                menuOpen ? "bg-brand-text -translate-y-[6.5px] -rotate-45" : "bg-white"
+                menuOpen ? "bg-brand-text -translate-y-[6.5px] -rotate-45" : "bg-brand-text md:bg-white"
               }`}
             />
           </div>
