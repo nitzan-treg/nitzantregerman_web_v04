@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors — Light theme */
+  --color-brand-bg: #FFFFFF;
+  --color-brand-text: #1A1A1A;
+  --color-brand-muted: #6B6B6B;
+  --color-brand-border: #E5E5E5;
+  --color-brand-accent: #1A1A1A;
+  --color-brand-card: #F5F5F5;
+
+  /* Font */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Type Scale (clamp-based) */
+  --text-display: clamp(3rem, 8vw, 7.5rem);
+  --text-heading: clamp(2rem, 4vw, 3rem);
+  --text-subheading: clamp(1.25rem, 2.5vw, 1.5rem);
+  --text-body: clamp(1rem, 1.2vw, 1.125rem);
+  --text-caption: clamp(0.75rem, 1vw, 0.875rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+}
+
+body {
+  background: #FFFFFF;
+  color: #1A1A1A;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B6B6B;
+}
+
+/* Focus styles for keyboard users */
+:focus-visible {
+  outline: 2px solid #1A1A1A;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Nav link animated underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #1A1A1A;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+  transform: scaleX(1);
+}
+
+/* Hero gradient overlay fade-in */
+.hero-overlay-fade {
+  animation: overlayFade 0.8s ease-out forwards;
+}
+
+@keyframes overlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hero Ken Burns slow zoom */
+.hero-ken-burns {
+  animation: kenBurns 8s ease-out forwards;
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* Scroll indicator bob */
+.hero-scroll-line {
+  animation: scrollBob 2s ease-in-out infinite;
+}
+
+@keyframes scrollBob {
+  0%, 100% { transform: scaleY(1); opacity: 0.5; }
+  50% { transform: scaleY(1.5); opacity: 1; }
+}
+
+/* Showreel mesmerizing wave hero.
+   - Base: vertical orange→white gradient (the "gradient from the top")
+   - Two SVG wave layers fill ABOVE a wavy line with their own vertical
+     orange-to-transparent gradient, so each layer contributes both a
+     gradient AND a non-linear wavy shape.
+   - 80px blur dissolves all edges into smooth mesmerising glows.
+   - SVG is 400% container width with 100% buffer on each side so blur
+     edges never reach the visible area.
+   - Wavelength 1600 in a 4800 viewBox = 3 cycles; translate(-33.333%)
+     shifts by exactly one wavelength → seamless loop. Wave 2's 800u
+     wavelength also gets an integer multiple (2 cycles), also seamless. */
+.wave-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #FFFFFF;
+}
+
+/* The wave-area is the box the SVG waves are positioned against. It
+   occupies only the TOP portion of .wave-hero — the remaining vertical
+   space in .wave-hero is empty white below the wave-area, giving the
+   blurred SVG (which extends past wave-area via its own negative top
+   and 240% height) room to fade out cleanly before it reaches the
+   section boundary. */
+.wave-area {
+  position: relative;
+}
+
+/* Every wave SVG shares this base. top:-70% / height:240% extends the
+   SVG past the visible area so filter: blur() edge-fades happen OUTSIDE
+   the container (clipped by .wave-hero's overflow:hidden). Blur radius
+   is driven by --wave-blur (fallback 80px) so each WaveHero instance
+   can set its own via inline style on the section. Per-wave width,
+   left, animation and z-index are set inline by the <WaveHero> React
+   component. */
+.wave-svg {
+  position: absolute;
+  top: -70%;
+  height: 240%;
+  display: block;
+  filter: blur(var(--wave-blur, 80px));
+  pointer-events: none;
+  will-change: transform;
+}
+
+@keyframes waveDrift {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-33.333%, 0, 0); }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

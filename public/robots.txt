@@ -1,0 +1,55 @@
+# LLM / AI scrapers — blocked from heavy media to protect Vercel bandwidth budget.
+# Regular search engine indexing (Googlebot, Bingbot, DuckDuckBot) is allowed everywhere.
+
+User-agent: GPTBot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: ClaudeBot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: anthropic-ai
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: Claude-Web
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: PerplexityBot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: CCBot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: Google-Extended
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: Bytespider
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: Amazonbot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: Omgilibot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: FacebookBot
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: Applebot-Extended
+Disallow: /assets/videos/
+Disallow: /assets/images/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nitzantregerman.com/sitemap.xml
