@@ -106,7 +106,7 @@ function NitzanProjectGrid({ projects }: { projects: NitzanProject[] }) {
   return (
     <div
       ref={gridRef}
-      className="grid grid-cols-1 gap-x-4 md:grid-cols-2 md:gap-x-5 lg:gap-x-6"
+      className="grid grid-cols-1 gap-x-8 md:grid-cols-2 md:gap-x-10 lg:gap-x-12"
     >
       {/* Left column */}
       <div className="flex flex-col gap-10 md:gap-14">
