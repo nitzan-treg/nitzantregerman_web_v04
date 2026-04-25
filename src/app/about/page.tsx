@@ -38,7 +38,7 @@ function PhotoCarousel() {
   }, []);
 
   return (
-    <div className="relative mx-auto aspect-square w-[80%] overflow-hidden bg-neutral-100">
+    <div className="relative mx-auto md:mr-0 aspect-square w-full max-w-[410px] overflow-hidden bg-neutral-100">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -50,7 +50,7 @@ function PhotoCarousel() {
               src={slide.src}
               alt={`Nitzan Tregerman — ${i + 1}`}
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 410px"
               className="object-cover"
               priority={i === 0}
             />
@@ -76,10 +76,10 @@ function PhotoCarousel() {
 
 export default function NitzanAboutPage() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col justify-center">
       {/* ── Intro grid (text left, carousel right) ─────── */}
-      <section className="pt-40 pb-24 px-[20%]">
-        <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2 md:gap-32">
+      <section className="px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
+        <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-[2fr_1fr] md:gap-32">
           {/* ── Left: text + social ─────────────────────── */}
           <div className="flex flex-col justify-center">
             <TextReveal
@@ -141,7 +141,7 @@ export default function NitzanAboutPage() {
         </div>
       </section>
 
-      <NitzanFooter />
-    </>
+      <NitzanFooter contentClassName="w-full px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]" />
+    </div>
   );
 }

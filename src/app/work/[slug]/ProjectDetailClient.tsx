@@ -470,7 +470,7 @@ function MediaGrid({
       // Single item — centered at ~60% width
       const item = allMedia[idx];
       rows.push(
-        <div key={`row-${idx}`} className="mx-auto max-w-[65%]">
+        <div key={`row-${idx}`} className="mx-auto w-full md:max-w-[65%]">
           {item.type === "video" ? (
             <InlineVideo src={item.src} aspect="16/9" />
           ) : (
@@ -515,7 +515,7 @@ function ImageGrid({ images, title }: { images: string[]; title: string }) {
   if (imgs.length === 3) {
     return (
       <div className="space-y-3">
-        <div className="mx-auto max-w-[65%]">
+        <div className="mx-auto w-full md:max-w-[65%]">
           <Img src={imgs[0]} alt={`${title} — 1`} aspect="16/9" sizes="65vw" />
         </div>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -705,7 +705,7 @@ export default function ProjectDetailClient({
             isWaveHero
               ? "pt-0 pb-10 md:pb-14 -mt-[25vh] md:-mt-[34vh]"
               : "py-12 md:py-16"
-          } px-[20%] relative z-10`}
+          } px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] relative z-10`}
         >
           <div className={` ${isWaveHero ? "text-center" : ""}`}>
             {!isWaveHero && (
@@ -736,7 +736,7 @@ export default function ProjectDetailClient({
 
       {/* ── PLAYABLE VIDEO (with controls, ~60% width) ── */}
       {(project.heroVideo || hasSingleVimeo || hasMultipleVimeo || project.youtubeId) && (
-        <div className="px-[20%] pb-10 md:pb-14">
+        <div className="px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] pb-10 md:pb-14">
           <div className="">
             <FadeIn direction="up">
               {project.youtubeId ? (
@@ -773,7 +773,7 @@ export default function ProjectDetailClient({
 
       {/* ── BRIEF (offset text) ───────────────────────── */}
       {project.slug !== "showreel-2025" && project.slug !== "peres-academy" && project.slug !== "pelephone-5g" && project.slug !== "cellcom-fiber" && project.slug !== "tlv-hug" && project.slug !== "partner-fiber" && project.slug !== "whakatane" && project.slug !== "meshek-tzuriel" && project.slug !== "paz-charge" && project.slug !== "ntlib" && (
-        <div className="pb-12 md:pb-16 px-[20%]">
+        <div className="pb-12 md:pb-16 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
           <div className="">
             <div className="md:ml-[25%] md:max-w-[600px] space-y-5">
               {project.description.map((paragraph, i) => (
@@ -795,7 +795,7 @@ export default function ProjectDetailClient({
       {project.slug === "peres-academy" && (
         <>
           {/* ── "The Portal" — first 3 paragraphs ──────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -820,7 +820,7 @@ export default function ProjectDetailClient({
 
           {/* ── 2-up video grid + "Behind the Scenes" on dark accent ── */}
           <section
-            className="py-16 md:py-24 px-[20%]"
+            className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D0D14" }}
           >
             <div className="">
@@ -858,7 +858,7 @@ export default function ProjectDetailClient({
       {/* ── SHOWREEL: thanks paragraph + R&D heading + R&D Vimeo ── */}
       {project.slug === "showreel-2025" && hasMultipleVimeo && (
         <>
-          <div className="pb-12 md:pb-16 px-[20%]">
+          <div className="pb-12 md:pb-16 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className="">
               <FadeIn direction="up">
                 <p
@@ -871,7 +871,7 @@ export default function ProjectDetailClient({
             </div>
           </div>
 
-          <div className="pb-8 md:pb-10 px-[20%]">
+          <div className="pb-8 md:pb-10 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className="">
               <FadeIn direction="up">
                 <h2
@@ -884,7 +884,7 @@ export default function ProjectDetailClient({
             </div>
           </div>
 
-          <div className="px-[20%] pb-10 md:pb-14">
+          <div className="px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] pb-10 md:pb-14">
             <div className="">
               <VimeoEmbed
                 id={project.vimeoIds![1]}
@@ -897,7 +897,7 @@ export default function ProjectDetailClient({
 
       {/* ── ADDITIONAL VIMEO EMBEDS (non-showreel, non-ntlib projects) ── */}
       {project.slug !== "showreel-2025" && project.slug !== "ntlib" && project.slug !== "partner-fiber" && project.heroVideo && hasMultipleVimeo && (
-        <div className="px-[20%] pb-10 md:pb-14">
+        <div className="px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] pb-10 md:pb-14">
           <div className=" space-y-6">
             {project.vimeoIds!.map((id, i) => (
               <VimeoEmbed
@@ -910,7 +910,7 @@ export default function ProjectDetailClient({
         </div>
       )}
       {project.slug !== "ntlib" && project.slug !== "tlv-hug" && project.heroVideo && hasSingleVimeo && (
-        <div className="px-[20%] pb-10 md:pb-14">
+        <div className="px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] pb-10 md:pb-14">
           <div className="">
             <VimeoEmbed id={project.vimeoId!} title={project.title} />
           </div>
@@ -926,7 +926,7 @@ export default function ProjectDetailClient({
               width. First paragraph (description[0]) renders as a
               larger subheader, second (description[1]) as the body
               detail line below it. */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-10 md:space-y-14 text-center">
               {project.description[0] && (
                 <FadeIn direction="up">
@@ -993,7 +993,7 @@ export default function ProjectDetailClient({
           </section>
 
           {/* ── Extrude Subdivision (3 videos, 3-up) ────── */}
-          <section className="py-10 md:py-14 px-[20%]">
+          <section className="py-10 md:py-14 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className="">
               <div className="mb-8 md:mb-10">
                 <FadeIn direction="up">
@@ -1022,7 +1022,7 @@ export default function ProjectDetailClient({
           </section>
 
           {/* ── 2D Smoke Solver (3 videos, 3-up) ────────── */}
-          <section className="py-10 md:py-14 px-[20%]">
+          <section className="py-10 md:py-14 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className="">
               <div className="mb-8 md:mb-10">
                 <FadeIn direction="up">
@@ -1051,7 +1051,7 @@ export default function ProjectDetailClient({
           </section>
 
           {/* ── 3D Chlandi Noise (3 videos, 3-up) ──────── */}
-          <section className="py-10 md:py-14 px-[20%]">
+          <section className="py-10 md:py-14 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className="">
               <div className="mb-8 md:mb-10">
                 <FadeIn direction="up">
@@ -1080,7 +1080,7 @@ export default function ProjectDetailClient({
           </section>
 
           {/* ── Infection Solver (3 videos, 3-up) ────────── */}
-          <section className="py-10 md:py-14 px-[20%]">
+          <section className="py-10 md:py-14 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className="">
               <div className="mb-8 md:mb-10">
                 <FadeIn direction="up">
@@ -1114,7 +1114,7 @@ export default function ProjectDetailClient({
       {project.slug === "pelephone-5g" && (
         <>
           {/* ── "The Environment" — intro text ──────────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1137,7 +1137,7 @@ export default function ProjectDetailClient({
 
           {/* ── Dark section: BTS video → text → 2 stills ─── */}
           <section
-            className="py-16 md:py-24 px-[20%]"
+            className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D0D14" }}
           >
             <div className="">
@@ -1192,7 +1192,7 @@ export default function ProjectDetailClient({
       {project.slug === "cellcom-fiber" && (
         <>
           {/* ── "The Portal" — intro text ──────────────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1215,7 +1215,7 @@ export default function ProjectDetailClient({
 
           {/* ── Dark section: 2-up breakdown videos + "Behind The Scenes" ── */}
           <section
-            className="py-16 md:py-24 px-[20%]"
+            className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D0D14" }}
           >
             <div className="">
@@ -1254,7 +1254,7 @@ export default function ProjectDetailClient({
       {project.slug === "tlv-hug" && (
         <>
           {/* ── Centered title: SideFX Houdini mark + group name ── */}
-          <section className="pt-24 md:pt-32 pb-8 md:pb-10 px-[20%]">
+          <section className="pt-24 md:pt-32 pb-8 md:pb-10 px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
             <FadeIn direction="up">
               <div className="flex items-center justify-center gap-3 md:gap-4">
                 <Image
@@ -1276,7 +1276,7 @@ export default function ProjectDetailClient({
           </section>
 
           {/* ── Intro paragraph (centered, bold) ── */}
-          <section className="pb-16 md:pb-24 px-[20%]">
+          <section className="pb-16 md:pb-24 px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
             <FadeIn direction="up">
               <p
                 className="text-brand-text text-center font-light leading-[1.5]"
@@ -1290,7 +1290,7 @@ export default function ProjectDetailClient({
           {/* ── Alternating 2-column grid ─────────────────── */}
           {/* Rows alternate text/media, media/text, text/media, media/text.
               Mobile collapses to a single column in DOM order. */}
-          <section className="pb-20 md:pb-28 px-[20%]">
+          <section className="pb-20 md:pb-28 px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
             <div className="space-y-16 md:space-y-28">
 
               {/* Row 1: TEXT (Save the Date + links) | MEDIA (art sim) */}
@@ -1450,7 +1450,7 @@ export default function ProjectDetailClient({
       {project.slug === "partner-fiber" && (
         <>
           {/* ── "Fiber Trails" — intro text ──────────────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1475,12 +1475,12 @@ export default function ProjectDetailClient({
 
           {/* ── Dark section: Sweep HDA → "Behind The Scenes" → 4 BTS clips ── */}
           <section
-            className="py-16 md:py-24 px-[20%]"
+            className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D0D14" }}
           >
             {project.videos?.[0] && (
               <div className="">
-                <div className="mx-auto max-w-[65%]">
+                <div className="mx-auto w-full md:max-w-[65%]">
                   <InlineVideo src={project.videos[0]} aspect="16/9" />
                 </div>
               </div>
@@ -1527,7 +1527,7 @@ export default function ProjectDetailClient({
       {project.slug === "whakatane" && (
         <>
           {/* ── "Polar Deformation" — intro text ──────────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1552,7 +1552,7 @@ export default function ProjectDetailClient({
 
           {/* ── Dark section: R&D Reel → "The Mathematics" → bts1 + bts2 ── */}
           <section
-            className="py-10 md:py-14 px-[20%]"
+            className="py-10 md:py-14 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D1014" }}
           >
             <div className="">
@@ -1593,7 +1593,7 @@ export default function ProjectDetailClient({
           </section>
 
           {/* ── Tutorial section (white) ──────────────────── */}
-          <section className="py-14 md:py-20 px-[20%]">
+          <section className="py-14 md:py-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1623,7 +1623,7 @@ export default function ProjectDetailClient({
       {project.slug === "meshek-tzuriel" && (
         <>
           {/* ── "The Goat" — intro text ──────────────────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1646,7 +1646,7 @@ export default function ProjectDetailClient({
 
           {/* ── Dark section: 2 videos → BTS text → 2 videos ── */}
           <section
-            className="py-16 md:py-24 px-[20%]"
+            className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D0D14" }}
           >
             <div className="">
@@ -1719,7 +1719,7 @@ export default function ProjectDetailClient({
       {project.slug === "paz-charge" && (
         <>
           {/* ── "The Character" — intro text ──────────────── */}
-          <section className="pb-14 md:pb-20 px-[20%]">
+          <section className="pb-14 md:pb-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
             <div className=" space-y-5">
               <FadeIn direction="up">
                 <h2
@@ -1742,7 +1742,7 @@ export default function ProjectDetailClient({
 
           {/* ── Dark section: "Behind The Scenes" text → 2×2 square image grid ── */}
           <section
-            className="py-16 md:py-24 px-[20%]"
+            className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
             style={{ backgroundColor: "#0D0D14" }}
           >
             <div className=" space-y-5">
@@ -1783,7 +1783,7 @@ export default function ProjectDetailClient({
 
       {/* ── MEDIA GALLERY (smart grid: 2-up rows) ─────── */}
       {project.slug !== "ntlib" && project.slug !== "peres-academy" && project.slug !== "pelephone-5g" && project.slug !== "cellcom-fiber" && project.slug !== "tlv-hug" && project.slug !== "partner-fiber" && project.slug !== "whakatane" && project.slug !== "meshek-tzuriel" && project.slug !== "paz-charge" && (
-        <div className="px-[20%] pb-10 md:pb-14">
+        <div className="px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%] pb-10 md:pb-14">
           <div className="">
             {hasVideos ? (
               <MediaGrid
@@ -1800,7 +1800,7 @@ export default function ProjectDetailClient({
 
       {/* ── BEHIND THE SCENES ─────────────────────────── */}
       {project.slug !== "partner-fiber" && project.behindTheScenes && project.behindTheScenes.length > 0 && (
-        <div className="py-14 md:py-20 px-[20%]">
+        <div className="py-14 md:py-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
           <div className="">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
               <div className="hidden md:block md:col-span-5 lg:col-span-6" />
@@ -1829,7 +1829,7 @@ export default function ProjectDetailClient({
       {/* ── FEATURES on accent bg (skip for ntlib — handled above) ── */}
       {project.slug !== "ntlib" && project.features && project.features.length > 0 && (
         <div
-          className="py-16 md:py-24 px-[20%]"
+          className="py-16 md:py-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]"
           style={{ backgroundColor: accent }}
         >
           <div className="">
@@ -1858,7 +1858,7 @@ export default function ProjectDetailClient({
 
       {/* ── LINKS (GitHub / Discord) ──────────────────── */}
       {project.slug !== "ntlib" && project.slug !== "tlv-hug" && project.links && project.links.length > 0 && (
-        <div className="py-10 md:py-14 px-[20%]">
+        <div className="py-10 md:py-14 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
           <div className="">
             <FadeIn direction="up">
               <div className="flex flex-wrap gap-4">
@@ -1891,7 +1891,7 @@ export default function ProjectDetailClient({
             rows.push({ role: "Tools", name: project.tools.join(" · ") });
 
           return (
-            <section className="py-14 md:py-20 px-[20%]">
+            <section className="py-14 md:py-20 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
               <div className="">
                 <FadeIn direction="up">
                   <h2
@@ -1928,7 +1928,7 @@ export default function ProjectDetailClient({
         })()}
 
       {/* ── NEXT PROJECT ──────────────────────────────── */}
-      <section className="pt-8 pb-16 md:pb-24 px-[20%]">
+      <section className="pt-8 pb-16 md:pb-24 px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]">
         <div className="">
           <Link
             href={`/work/${nextProject.slug}`}
@@ -1962,7 +1962,7 @@ export default function ProjectDetailClient({
         </div>
       </section>
 
-      <NitzanFooter />
+      <NitzanFooter contentClassName="w-full px-6 sm:px-10 md:px-[8%] lg:px-[12%] xl:px-[20%]" />
     </>
   );
 }

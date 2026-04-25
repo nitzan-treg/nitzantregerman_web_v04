@@ -46,13 +46,6 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: siteUrl },
-  icons: {
-    icon: [
-      { url: "/assets/images/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/assets/images/favicon-256.png", sizes: "256x256", type: "image/png" },
-    ],
-    apple: "/assets/images/favicon-256.png",
-  },
 };
 
 export default function RootLayout({

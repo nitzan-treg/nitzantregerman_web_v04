@@ -171,7 +171,7 @@ export default function NitzanHomePage() {
         </div>
       </section>
 
-      <NitzanFooter />
+      <NitzanFooter contentClassName="w-full px-12 md:px-20 lg:px-32" />
     </>
   );
 }

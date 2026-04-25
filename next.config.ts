@@ -11,6 +11,18 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 2678400,
   },
   async headers() {
+    // In dev: no long caching, so re-encoded videos/images appear immediately.
+    // In production: 1-year immutable cache on /assets/** to save bandwidth.
+    if (process.env.NODE_ENV !== "production") {
+      return [
+        {
+          source: "/assets/:path*",
+          headers: [
+            { key: "Cache-Control", value: "no-store, must-revalidate" },
+          ],
+        },
+      ];
+    }
     return [
       {
         source: "/assets/:path*",

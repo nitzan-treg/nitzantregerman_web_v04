@@ -11,10 +11,17 @@ const socialIcons = [
   { key: "instagram", url: nitzanProfile.social.instagram, icon: "/assets/images/instagram-icon.png", alt: "Instagram" },
 ];
 
-export default function NitzanFooter() {
+export default function NitzanFooter({
+  contentClassName,
+}: {
+  /** Override the default inner padding. Used by pages (e.g. /about) whose
+   *  section above the footer uses a different inset pattern — pass the
+   *  same responsive padding to make the footer edges align with it. */
+  contentClassName?: string;
+} = {}) {
   return (
     <section className="pt-8 pb-10 md:pt-10 md:pb-12">
-      <div className="w-full px-6 md:px-10 lg:px-16">
+      <div className={contentClassName ?? "w-full px-6 md:px-10 lg:px-16"}>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <div>
             <p className="text-brand-muted mb-4 text-base md:text-lg font-medium tracking-widest">
@@ -34,14 +41,14 @@ export default function NitzanFooter() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="opacity-100 hover:opacity-60 transition-opacity duration-300"
               >
                 <Image
                   src={s.icon}
                   alt={s.alt}
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 object-contain"
+                  width={56}
+                  height={35}
+                  className="h-[35px] w-auto brightness-0"
                 />
               </a>
             ))}

@@ -189,7 +189,7 @@ export const nitzanProjects: NitzanProject[] = [
     ],
     agency: "Broadcast Media TLV",
     thumbnail: img("peres-titanik-poster.jpg"),
-    thumbnailVideo: vid("peres-thumb.mp4"),
+    thumbnailVideo: vid("peres-breakdown.mp4"),
     images: [img("peres-titanik-poster.jpg"), img("peres-bts-poster.jpg")],
     heroVideo: vid("peres-breakdown.mp4"),
     youtubeId: "ux3W9YLKd60",
