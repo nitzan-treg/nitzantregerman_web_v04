@@ -40,7 +40,7 @@ function NitzanNav() {
   return (
     <nav
       aria-label="Portfolio navigation"
-      className={`fixed top-0 left-0 right-0 z-50 bg-white md:bg-transparent ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-transparent ${
         menuOpen ? "" : "md:mix-blend-difference"
       }`}
     >
@@ -145,7 +145,7 @@ function NitzanNav() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-            className="bg-brand-bg fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden"
           >
             <ul className="flex flex-col items-center gap-8">
               {nitzanNav.map((link, i) => (
