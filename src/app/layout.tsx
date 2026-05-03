@@ -10,7 +10,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://nitzantregerman.com";
+const siteUrl = "https://www.nitzantregerman.com";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +46,61 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: siteUrl },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/assets/images/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/images/favicon-256.png", sizes: "256x256", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/assets/images/favicon-256.png",
+  },
+};
+
+// JSON-LD: Person + WebSite entities. Helps Google build a Knowledge Graph
+// node for "Nitzan Tregerman", which powers autocomplete on partial queries
+// (e.g. "nitzan t") and the right-side info panel on branded searches.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Nitzan Tregerman",
+      alternateName: ["Nitzan Treger", "treger_man"],
+      url: siteUrl,
+      image: `${siteUrl}/assets/images/nitzan-portrait-01.webp`,
+      jobTitle: "Motion Designer & VFX Artist",
+      description:
+        "Freelance 3D animator, motion graphics and visual effects artist specializing in SideFX Houdini, Blender, and After Effects.",
+      knowsAbout: [
+        "3D Animation",
+        "Visual Effects",
+        "SideFX Houdini",
+        "Blender",
+        "After Effects",
+        "Procedural Generation",
+        "Motion Graphics",
+        "Compositing",
+        "VEX",
+      ],
+      sameAs: [
+        "https://linkedin.com/in/nitzan-tregerman-72699b16a/",
+        "https://github.com/nitzan-treg",
+        "https://youtube.com/@nitzantregerman",
+        "https://vimeo.com/user105531305",
+        "https://instagram.com/treger_man/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Nitzan Tregerman",
+      url: siteUrl,
+      publisher: { "@id": `${siteUrl}/#person` },
+      inLanguage: "en",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -54,6 +109,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <GSAPProvider>
           <NitzanShell>{children}</NitzanShell>
         </GSAPProvider>
