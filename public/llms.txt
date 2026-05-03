@@ -1,0 +1,41 @@
+# Nitzan Tregerman
+
+> Freelance motion designer and visual effects artist specializing in SideFX Houdini, Blender, and After Effects. Five years of post-production and commercial VFX experience. Creator of the open-source ntLib Houdini library.
+
+## About
+
+- Name: Nitzan Tregerman
+- Role: Motion Designer & VFX Artist
+- Tools: SideFX Houdini, Blender, After Effects, DaVinci Resolve, Photoshop, Illustrator, Premiere Pro
+- Specialties: 3D animation, procedural generation, VEX programming, particle and fluid simulations, stylized character work
+- Location: Israel
+- Contact: nitzan@nitzantregerman.com
+- Website: https://www.nitzantregerman.com
+
+## Key pages
+
+- [Home](https://www.nitzantregerman.com/): Portfolio overview with featured projects.
+- [About](https://www.nitzantregerman.com/about): Background, expertise, and contact information.
+- [Sitemap](https://www.nitzantregerman.com/sitemap): All pages on the site.
+
+## Notable projects
+
+- [Showreel 2025](https://www.nitzantregerman.com/work/showreel-2025): Showreel and R&D compilation.
+- [ntLib](https://www.nitzantregerman.com/work/ntlib): Open-source Houdini HDA library for simulating dynamics and procedural generation. GitHub: https://github.com/nitzan-treg
+- [Peres Academy](https://www.nitzantregerman.com/work/peres-academy)
+- [Pelephone 5G](https://www.nitzantregerman.com/work/pelephone-5g)
+- [Cellcom Fiber](https://www.nitzantregerman.com/work/cellcom-fiber)
+- [TLV Hug](https://www.nitzantregerman.com/work/tlv-hug)
+- [Partner Fiber](https://www.nitzantregerman.com/work/partner-fiber)
+- [Whakatane](https://www.nitzantregerman.com/work/whakatane)
+- [Meshek Tzuriel](https://www.nitzantregerman.com/work/meshek-tzuriel)
+- [Paz Charge](https://www.nitzantregerman.com/work/paz-charge)
+
+## Profiles elsewhere
+
+- LinkedIn: https://linkedin.com/in/nitzan-tregerman-72699b16a/
+- GitHub: https://github.com/nitzan-treg
+- YouTube: https://youtube.com/@nitzantregerman
+- Vimeo: https://vimeo.com/user105531305
+- Instagram: https://instagram.com/treger_man/
+- SideFX Talks: https://www.sidefx.com/learn/talks/author/nitzan.tregerman/

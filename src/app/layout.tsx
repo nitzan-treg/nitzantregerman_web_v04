@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import GSAPProvider from "@/components/animation/GSAPProvider";
 import NitzanShell from "./NitzanShell";
@@ -12,6 +12,20 @@ const inter = Inter({
 
 const siteUrl = "https://www.nitzantregerman.com";
 
+const socialUrls = [
+  "https://linkedin.com/in/nitzan-tregerman-72699b16a/",
+  "https://github.com/nitzan-treg",
+  "https://youtube.com/@nitzantregerman",
+  "https://vimeo.com/user105531305",
+  "https://instagram.com/treger_man/",
+];
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Nitzan Tregerman — 3D Animation & VFX",
@@ -20,6 +34,24 @@ export const metadata: Metadata = {
   description:
     "A motion designer and compositor creating 3D animation with Houdini, Blender, and After Effects.",
   metadataBase: new URL(siteUrl),
+  applicationName: "Nitzan Tregerman",
+  authors: [{ name: "Nitzan Tregerman", url: siteUrl }],
+  creator: "Nitzan Tregerman",
+  publisher: "Nitzan Tregerman",
+  keywords: [
+    "Nitzan Tregerman",
+    "motion designer",
+    "VFX artist",
+    "3D animation",
+    "SideFX Houdini",
+    "Blender",
+    "After Effects",
+    "procedural generation",
+    "motion graphics",
+    "Houdini freelancer",
+    "ntLib",
+  ],
+  category: "portfolio",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -43,8 +75,21 @@ export const metadata: Metadata = {
     description:
       "A motion designer and compositor creating 3D animation with Houdini, Blender, and After Effects.",
     images: ["/assets/images/showreel-poster.jpg"],
+    creator: "@treger_man",
   },
-  robots: { index: true, follow: true },
+  // Maximum exposure: index/follow + tell Googlebot to use large thumbnails
+  // and full snippets — drives much higher SERP CTR for portfolio queries.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: { canonical: siteUrl },
   icons: {
     icon: [
@@ -55,6 +100,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/assets/images/favicon-256.png",
   },
+  manifest: "/manifest.webmanifest",
 };
 
 // JSON-LD: Person + WebSite entities. Helps Google build a Knowledge Graph
@@ -84,13 +130,7 @@ const jsonLd = {
         "Compositing",
         "VEX",
       ],
-      sameAs: [
-        "https://linkedin.com/in/nitzan-tregerman-72699b16a/",
-        "https://github.com/nitzan-treg",
-        "https://youtube.com/@nitzantregerman",
-        "https://vimeo.com/user105531305",
-        "https://instagram.com/treger_man/",
-      ],
+      sameAs: socialUrls,
     },
     {
       "@type": "WebSite",
@@ -108,6 +148,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnects: warm up TLS to third-party origins we always hit */}
+        <link rel="preconnect" href="https://player.vimeo.com" />
+        <link rel="dns-prefetch" href="https://player.vimeo.com" />
+        <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://github.com" />
+        <link rel="dns-prefetch" href="https://github.com" />
+        {/* rel=me for distributed identity / IndieAuth / Mastodon verification */}
+        {socialUrls.map((url) => (
+          <link key={url} rel="me" href={url} />
+        ))}
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <script
           type="application/ld+json"
