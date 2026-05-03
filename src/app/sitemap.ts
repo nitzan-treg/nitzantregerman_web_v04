@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${BASE}/assets/images/nitzan-portrait-01.webp`],
     },
     {
-      url: `${BASE}/sitemap`,
+      url: `${BASE}/site-map`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.3,
