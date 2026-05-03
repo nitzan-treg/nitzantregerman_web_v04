@@ -16,7 +16,7 @@
 
 - [Home](https://www.nitzantregerman.com/): Portfolio overview with featured projects.
 - [About](https://www.nitzantregerman.com/about): Background, expertise, and contact information.
-- [Sitemap](https://www.nitzantregerman.com/sitemap): All pages on the site.
+- [Sitemap](https://www.nitzantregerman.com/site-map): All pages on the site.
 
 ## Notable projects
 
