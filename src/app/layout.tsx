@@ -1,8 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import GSAPProvider from "@/components/animation/GSAPProvider";
 import NitzanShell from "./NitzanShell";
 import "./globals.css";
+
+// GA4 Measurement ID for the "Nitzan Tregerman Motion Graphics" web stream
+// (account: nitzantregerman@gmail.com). Hardcoded on purpose: it's a public ID
+// (visible in every visitor's page source) and hardcoding avoids the
+// forgot-to-set-the-env-var-in-Vercel failure that silently broke tracking
+// after the Webflow→Next migration. This must match the stream at
+// analytics.google.com → Admin → Data streams → nitzantregerman.com.
+const GA_MEASUREMENT_ID = "G-PRYYRJ0PP8";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -170,6 +179,7 @@ export default function RootLayout({
           <NitzanShell>{children}</NitzanShell>
         </GSAPProvider>
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
