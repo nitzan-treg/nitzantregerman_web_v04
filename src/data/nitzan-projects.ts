@@ -283,7 +283,7 @@ export const nitzanProjects: NitzanProject[] = [
       vid("tlvhug-art.mp4"),
     ],
     links: [
-      { label: "Sign Up for the Next Meetup", url: "https://forms.gle/Czu1LCA5qNcUvK2z7" },
+      { label: "Sign Up for the Next Meetup", url: "https://forms.gle/qXAzQfNQRTsdx9E68" },
       { label: "Join our Discord Channel", url: "https://discord.gg/nW95eKFFW5" },
       { label: "Join our Whatsapp Group", url: "https://chat.whatsapp.com/Kx9rfAiJgQPACAqaaUMTqn" },
     ],

@@ -76,9 +76,12 @@ function PhotoCarousel() {
 
 export default function AboutClient() {
   return (
-    <div className="flex min-h-screen flex-col md:justify-center">
-      {/* ── Intro grid (text left, carousel right) ─────── */}
-      <section className="pt-32 md:pt-0 px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
+    <div className="flex min-h-screen flex-col md:py-32">
+      {/* ── Intro grid (text left, carousel right) ───────
+           md:my-auto centers the block vertically when it fits, but auto
+           margins never go negative, so tall content can't slide up under
+           the fixed nav (the old md:justify-center overflowed upward). */}
+      <section className="pt-32 md:pt-0 md:my-auto px-6 sm:px-10 md:px-[4%] lg:px-[6%] xl:px-[10%]">
         <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-[2fr_1fr] md:gap-32">
           {/* ── Left: text + social ─────────────────────── */}
           <div className="flex flex-col justify-center">

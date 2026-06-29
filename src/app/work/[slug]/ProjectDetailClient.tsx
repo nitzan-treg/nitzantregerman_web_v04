@@ -1319,7 +1319,7 @@ export default function ProjectDetailClient({
                           className="font-light text-[#2F6FEB] hover:underline"
                           style={{ fontSize: "clamp(0.95rem, 1.8vw, 1.4rem)" }}
                         >
-                          Sign Up for the Next Meetup (January 2026)
+                          Sign Up for the Next Meetup (July 21, 2026)
                         </a>
                       </li>
                       <li className="flex items-center gap-4">
